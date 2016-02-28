@@ -16,7 +16,7 @@ import (
 // go run gcd.go 4 8
 func main() {
 	if len(os.Args) != 3 {
-		fmt.Println("see usage coments in file")
+		fmt.Println("see usage comments in file")
 		return
 	}
 
