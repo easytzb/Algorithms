@@ -13,10 +13,10 @@ import (
 	"strconv"
 )
 
-func newtonIterator(start float64) func(value float64) float64 {
+func newtonIterator(start float64) func(n float64) float64 {
 	sqr := start
-	return func(value float64) float64 {
-		sqr = (sqr + value/sqr) / 2.0
+	return func(n float64) float64 {
+		sqr = (sqr + n/sqr) / 2.0
 		return sqr
 	}
 }
@@ -29,19 +29,23 @@ func main() {
 		return
 	}
 
-	num, err := strconv.ParseFloat(os.Args[1], 64)
+	n, err := strconv.ParseFloat(os.Args[1], 64)
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
-	if num < 0 {
+	if n < 0.0 {
 		fmt.Println("arg should be a Positive integer")
 		return
 	}
 
-	sqr := math.Sqrt(num)
-	f := newtonIterator(num)
-	for i := 0; i < 40; i++ {
-		fmt.Println(i, ". ", f(num), ":", sqr)
+	start := 1.0
+	f := newtonIterator(start)
+
+	rightSqrt, lastSqrt, sqrt := math.Sqrt(n), start, 0.0
+	for ; math.Abs(lastSqrt-sqrt) > 1.0e-10; sqrt = f(n) {
+		fmt.Println(rightSqrt, sqrt, lastSqrt, math.Abs(lastSqrt-sqrt))
+		lastSqrt = sqrt
 	}
+	fmt.Println("last: ", rightSqrt, sqrt)
 }
