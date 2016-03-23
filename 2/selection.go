@@ -1,3 +1,4 @@
+//Selection sort
 package main
 
 import (
@@ -7,6 +8,7 @@ import (
 func main() {
 	arr := [10]int{9, 4, 11, 5, 6, 7, 1, 10, 8, 3}
 	len := len(arr)
+	fmt.Println("b", arr)
 	for i := 0; i < len; i++ {
 		min := i
 
@@ -20,8 +22,8 @@ func main() {
 			arr[i] = arr[min]
 			arr[min] = tmp
 		}
-		fmt.Println(i, arr)
+		fmt.Println(i+1, arr)
 	}
 
-	fmt.Println(arr)
+	fmt.Println("e", arr)
 }
