@@ -1,4 +1,4 @@
-//Insertion sort
+//Insertion sort: replace the exchanging with moving
 package main
 
 import (
@@ -10,11 +10,20 @@ func main() {
 	len := len(arr)
 	fmt.Println("b", arr)
 	for i := 1; i < len; i++ {
+		tmp := arr[i]
+		k := i
 		for j := i; j > 0 && arr[j] < arr[j-1]; j-- {
-			tmp := arr[j]
+			//tmp := arr[j]
+			//arr[j] = arr[j-1]
+			//arr[j-1] = tmp
 			arr[j] = arr[j-1]
-			arr[j-1] = tmp
+			k = j - 1
 		}
+
+		if k != i {
+			arr[k] = tmp
+		}
+
 		fmt.Println(i, arr)
 	}
 
