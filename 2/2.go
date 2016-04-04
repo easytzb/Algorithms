@@ -6,30 +6,19 @@ import (
 	"time"
 )
 
-func main() {
-	var arr []int
-
+func sort(f func([]int), times int, length int) {
 	t0 := time.Now()
-	for i := 0; i < 10; i++ {
-		arr = rand.Perm(1000)
-		improv_insertion(arr)
+	for i := 0; i < times; i++ {
+		arr := rand.Perm(length)
+		f(arr)
 	}
 	t1 := time.Now()
-	fmt.Printf("The improve_insertion took %v to run.\n", t1.Sub(t0))
+	fmt.Printf("The %v took %v to run.\n", f, t1.Sub(t0))
+}
 
-	t0 = time.Now()
-	for i := 0; i < 10; i++ {
-		arr = rand.Perm(1000)
-		insertion(arr)
-	}
-	t1 = time.Now()
-	fmt.Printf("The insertion took %v to run.\n", t1.Sub(t0))
+func main() {
 
-	t0 = time.Now()
-	for i := 0; i < 10; i++ {
-		arr = rand.Perm(1000)
-		selection(arr)
-	}
-	t1 = time.Now()
-	fmt.Printf("The selection took %v to run.\n", t1.Sub(t0))
+	sort(improv_insertion, 1000, 1000)
+	sort(insertion, 1000, 1000)
+	sort(selection, 1000, 1000)
 }
