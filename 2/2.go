@@ -25,7 +25,11 @@ func sort(f func([]int), times int, length int) {
 //go install github.com/easytzb/Algorithms/2; ../bin/2 improv_insertion insertion selection 默认三种算法各执行1000，且slice长度为1000
 //go install github.com/easytzb/Algorithms/2; ../bin/2 [1000 [1000]] improv_insertion insertion selection
 func main() {
-	funcs := map[string]func([]int){"improv_insertion": improv_insertion, "insertion": insertion, "selection": selection}
+	funcs := map[string]func([]int){
+		"improv_insertion": improv_insertion,
+		"insertion":        insertion,
+		"selection":        selection,
+		"shellBars":        shellBars}
 
 	len := len(os.Args)
 	startIndex, times, sliceLen := 1, 1000, 1000
@@ -49,6 +53,8 @@ func main() {
 	for i := startIndex; i < len; i++ {
 		if fun, ok := funcs[os.Args[i]]; ok {
 			sort(fun, times, sliceLen)
+		} else {
+			fmt.Printf("Function %v don't exist.\n", os.Args[i])
 		}
 	}
 }
