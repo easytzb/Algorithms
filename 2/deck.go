@@ -57,16 +57,17 @@ func getDeck() []Card {
 
 func sortDeck(c []Card) []Card {
 	len := len(c)
-	for step := len >> 1; step > 0; step = step >> 1 {
+	for step := len >> 1; step > 0; step >>= 1 {
 		for i := step; i < len; i++ {
 			tmp := c[i]
-			tmp_index := i
+			min_val_index := i
 			for j := i - step; j >= 0 && tmp.less(c[j]) == 1; j -= step {
 				c[j+step] = c[j]
-				tmp_index = j
+				min_val_index = j
 			}
-			if i != tmp_index {
-				c[tmp_index] = tmp
+
+			if i != min_val_index {
+				c[min_val_index] = tmp
 			}
 		}
 	}
