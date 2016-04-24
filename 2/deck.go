@@ -26,10 +26,8 @@ func (c1 Card) less(c2 Card) int {
 	v2 := c2.suit*100 + c2.val
 	if v1 < v2 {
 		return 1
-	} else if v1 == v2 {
-		return 0
 	} else {
-		return -1
+		return 0
 	}
 }
 
