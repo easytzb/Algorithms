@@ -1,8 +1,8 @@
-//shellBars sort
+//shell sort
 package main
 
 //import "fmt"
-func shellBars(arr []int) {
+func shell(arr []int) {
 	len := len(arr)
 	//compareNums := 0
 	for step := len >> 1; step > 0; step = step >> 1 {
