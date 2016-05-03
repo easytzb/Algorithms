@@ -1,5 +1,5 @@
 // Can be run as follow:
-//go install github.com/easytzb/Algorithms/2; ../bin/2 improv_insertion insertion selection 默认三种算法各执行1000，且slice长度为1000
+//go install github.com/easytzb/Algorithms/2; ../bin/2 insertion selection insertion_without_exchange insertion_with_sentinel shell 默认三种算法各执行1000，且slice长度为1000
 //go install github.com/easytzb/Algorithms/2; ../bin/2 [1000 [1000]] improv_insertion insertion selection
 //go install github.com/easytzb/Algorithms/2; ../bin/2 deck|dequeue
 package main
@@ -26,11 +26,12 @@ func sort(f func([]int), times int, length int) {
 
 func main() {
 	funcs := map[string]func([]int){
-		"improv_insertion":        improv_insertion,
-		"insertion":               insertion,
-		"insertion_with_sentinel": insertion_with_sentinel,
-		"selection":               selection,
-		"shell":                   shell}
+		"insertion_without_exchange":               insertion_without_exchange,
+		"insertion_without_exchange_with_sentinel": insertion_without_exchange_with_sentinel,
+		"insertion":                                insertion,
+		"insertion_with_sentinel":                  insertion_with_sentinel,
+		"selection":                                selection,
+		"shell":                                    shell}
 
 	cardFuncs := map[string]func(){
 		"deck":    deck,

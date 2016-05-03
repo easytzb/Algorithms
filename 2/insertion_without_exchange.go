@@ -1,7 +1,7 @@
 //Insertion sort: replace the exchanging with moving
 package main
 
-func improv_insertion(arr []int) {
+func insertion_without_exchange(arr []int) {
 	len := len(arr)
 	for i := 1; i < len; i++ {
 		k, tmp := i, arr[i]
