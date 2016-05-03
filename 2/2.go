@@ -26,10 +26,11 @@ func sort(f func([]int), times int, length int) {
 
 func main() {
 	funcs := map[string]func([]int){
-		"improv_insertion": improv_insertion,
-		"insertion":        insertion,
-		"selection":        selection,
-		"shell":            shell}
+		"improv_insertion":        improv_insertion,
+		"insertion":               insertion,
+		"insertion_with_sentinel": insertion_with_sentinel,
+		"selection":               selection,
+		"shell":                   shell}
 
 	cardFuncs := map[string]func(){
 		"deck":    deck,
