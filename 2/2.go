@@ -21,7 +21,7 @@ func sort(f func([]int), times int, length int) {
 		f(arr)
 	}
 	t1 := time.Now()
-	fmt.Printf("The %v sort %v Arr %v times took %v to run.\n", runtime.FuncForPC(reflect.ValueOf(f).Pointer()).Name(), length, times, t1.Sub(t0))
+	fmt.Printf("N:%v\ttimes:%v\t%v\t%v\n", length, times, t1.Sub(t0), runtime.FuncForPC(reflect.ValueOf(f).Pointer()).Name())
 }
 
 func main() {
@@ -31,6 +31,7 @@ func main() {
 		"insertion":                                insertion,
 		"insertion_with_sentinel":                  insertion_with_sentinel,
 		"selection":                                selection,
+		"bubble":                                   bubble,
 		"shell":                                    shell}
 
 	cardFuncs := map[string]func(){
