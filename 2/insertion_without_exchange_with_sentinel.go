@@ -1,4 +1,4 @@
-//Insertion sort: replace the exchanging with moving
+// Insertion sort with sentinel: replace the exchanging with moving
 package main
 
 func insertion_without_exchange_with_sentinel(arr []int) {

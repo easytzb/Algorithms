@@ -1,4 +1,4 @@
-//Insertion sort
+// Insertion sort with sentinel
 package main
 
 func insertion_with_sentinel(arr []int) {

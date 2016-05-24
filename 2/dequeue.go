@@ -1,7 +1,7 @@
-//Dequeue sort.
-//Explain how you would sort a deck of cards, with the restric-tion that
-//the only allowed operations are to look at the values of the top two cards,
-//to exchange the top two cards, and to move the top card to the bottom of the deck.
+// Dequeue sort.
+// Explain how you would sort a deck of cards, with the restric-tion that
+// the only allowed operations are to look at the values of the top two cards,
+// to exchange the top two cards, and to move the top card to the bottom of the deck.
 package main
 
 import (

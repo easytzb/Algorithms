@@ -1,4 +1,4 @@
-//Insertion sort
+// Insertion sort
 package main
 
 func insertion(arr []int) {

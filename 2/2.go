@@ -1,7 +1,7 @@
 // Can be run as follow:
-//go install github.com/easytzb/Algorithms/2; ../bin/2 insertion selection insertion_without_exchange insertion_with_sentinel shell 默认三种算法各执行1000，且slice长度为1000
-//go install github.com/easytzb/Algorithms/2; ../bin/2 [1000 [1000]] improv_insertion insertion selection
-//go install github.com/easytzb/Algorithms/2; ../bin/2 deck|dequeue
+// go install github.com/easytzb/Algorithms/2; ../bin/2 insertion selection insertion_without_exchange insertion_with_sentinel shell 默认三种算法各执行1000，且slice长度为1000
+// go install github.com/easytzb/Algorithms/2; ../bin/2 [1000 [1000]] improv_insertion insertion selection
+// go install github.com/easytzb/Algorithms/2; ../bin/2 deck|dequeue
 package main
 
 import (
