@@ -32,6 +32,7 @@ func main() {
 		"insertion_with_sentinel":                  insertion_with_sentinel,
 		"selection":                                selection,
 		"bubble":                                   bubble,
+		"cocktail":                                 cocktail,
 		"shell":                                    shell}
 
 	cardFuncs := map[string]func(){
