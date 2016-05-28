@@ -34,7 +34,9 @@ func shuffle() []Card {
 		}
 	}
 
+	//just like bucket sort
 	for i := 0; i < 52; i++ {
+		//为了达到洗牌的随机效果，将之前已入桶的牌j放到当前i号位置
 		j := rand.Intn(i + 1)
 		c[i] = c[j]
 		c[j] = t[i]
