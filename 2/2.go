@@ -33,6 +33,7 @@ func main() {
 		"selection":                                selection,
 		"bubble":                                   bubble,
 		"cocktail":                                 cocktail,
+		"bucket":                                   bucket,
 		"shell":                                    shell}
 
 	cardFuncs := map[string]func(){
