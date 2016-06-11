@@ -34,6 +34,7 @@ func main() {
 		"bubble":                                   bubble,
 		"cocktail":                                 cocktail,
 		"bucket":                                   bucket,
+		"counting":                                 counting,
 		"shell":                                    shell}
 
 	cardFuncs := map[string]func(){
