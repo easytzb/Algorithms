@@ -34,6 +34,7 @@ func main() {
 		"bubble":                                   bubble,
 		"cocktail":                                 cocktail,
 		"bucket":                                   bucket,
+		"merge":                                    merge,
 		"counting":                                 counting,
 		"shell":                                    shell}
 
