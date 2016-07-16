@@ -36,6 +36,7 @@ func main() {
 		"bucket":                                   bucket,
 		"merge":                                    merge,
 		"counting":                                 counting,
+		"merge_recursion":                          merge_recursion,
 		"shell":                                    shell}
 
 	cardFuncs := map[string]func(){
